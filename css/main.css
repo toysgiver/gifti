@@ -26,3 +26,9 @@
   padding-left: 10px;
   line-height: 80px;
 }
+#background img{
+  height:500px;
+  width: auto;
+background-image: url(../IMG/jouet2.jpeg);
+background-attachment:fixed;
+  }
