@@ -9,11 +9,11 @@
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #affichage_produit li{
-  /* display: inline-block; */
+  display: flex;
   margin: auto;
 }
 
@@ -22,4 +22,10 @@
   height: 200px;
   max-width: 80%;
   min-width: 20%;
+}
+
+#affichage_produit div{
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
 }
