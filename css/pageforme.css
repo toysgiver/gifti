@@ -1,0 +1,21 @@
+
+/*ajout de luc */
+#affichage_produit{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+
+#affichage_produit li{
+  display: inline-block;
+  margin: auto;
+}
+
+#affichage_produit img{
+  width: 200px;
+  height: 200px;
+  max-width: 80%;
+  min-width: 20%;
+}
