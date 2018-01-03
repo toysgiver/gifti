@@ -1,13 +1,5 @@
 slider();
 
-var slider = document.getElementsByClassName("slider");
-for (var i = 0; i < slider.length; i++){
-    var arrow = slider[i].getElementsByClassName("arrow-left")[0];
-    setInterval(function(){
-        sliderMove(arrow,"right");
-    }, 5000);
-}
-
 function sliderMove(arrow, direction){
     var slider = arrow.parentNode;
     var slide = slider.getElementsByClassName("slider-content");
@@ -50,6 +42,10 @@ function slider(){
         var arrowRight = document.createElement("div");
         arrowRight.classList.add("arrow-right");
         slider[i].appendChild(arrowRight);
+
+        // setInterval(function(){
+        //     sliderMove(arrowLeft,"right");
+        // }, 5000);
 
         arrowLeft.onclick = function(e){
             sliderMove(this, "left");
