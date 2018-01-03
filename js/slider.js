@@ -16,26 +16,19 @@ function sliderMove(arrow, direction){
         sliderPosition++;
     }
 
-    console.log(sliderPosition);
-    if(sliderPosition >= -(slide.length-1) && sliderPosition <= 0){
-        slider.setAttribute("rel",sliderPosition);
-        for (var i = 0; i < slide.length; i++){
-            slide[i].style.left = left+"px";
-        }
-    }else if(sliderPosition == -slide.length){
-        for (var i = 0; i < slide.length; i++){
-            slider.setAttribute("rel","0");
-            slide[i].removeAttribute("style");
-        }
+    var transition = true;
+    if(sliderPosition == -slide.length){
+        sliderPosition = 0;
+        left = 0;
+    }else if(sliderPosition == 1){
+        sliderPosition = -Number(slide.length-1);
+        left = width*sliderPosition;
     }
-    // else if(sliderPosition == 1){
-    //     for (var i = 0; i < slide.length; i++){
-    //         slider.setAttribute("rel",-(slide.length-1));
-    //         slide[i].style.left = -(width*(slide.length-1))+"px";
-    //         console.log(slider.getAttribute("rel"));
-    //         slide[i].removeAttribute("style");
-    //     }
-    // }
+
+    slider.setAttribute("rel",sliderPosition);
+    for (var i = 0; i < slide.length; i++){
+        slide[i].style.left = left+"px";
+    }
 
 }
 
