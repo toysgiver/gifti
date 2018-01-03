@@ -1,15 +1,19 @@
 
 /*ajout de luc */
+
+#content{
+  background-color: white;
+}
+
 #affichage_produit{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
-
 }
 
 #affichage_produit li{
-  display: inline-block;
+  /* display: inline-block; */
   margin: auto;
 }
 
