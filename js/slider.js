@@ -9,11 +9,11 @@ function sliderMove(arrow, direction){
     var left = width*sliderPosition;
 
     if(direction == "left"){
-        left -= width;
-        sliderPosition--;
-    }else{
         left += width;
         sliderPosition++;
+    }else{
+        left -= width;
+        sliderPosition--;
     }
 
     var transition = true;
