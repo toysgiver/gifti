@@ -4,9 +4,9 @@
 }
 
 body{
-background-image: url("../img/jouet2.jpeg");
-background-attachment:fixed;
-background-size: contain;
+  background-image: url("../img/jouet2.jpeg");
+  background-attachment:fixed;
+  background-size: contain;
   }
 
 #content{
@@ -33,12 +33,28 @@ background-size: contain;
   line-height: 80px;
 
 }
-li{
-  list-style-type: none;
-  background-color:white;
+
+footer{
+  background: #ffe0b2;
+  display: inline-block;
+  text-align: center;
+  text-decoration-color:black;
+  width: 100%;
 }
 
-.ul id{
-  border-color: purple;
-  background-color: black;
+footer ul{
+  text-decoration-color:black;
+  list-style-type: none;
+  float: right;
+  margin: 10px;
+}
+
+footer ul li{
+  text-decoration-color:black;
+  text-align: center;
+	margin-right: 20px;
+  float: left;
+}
+a.top{
+  position: fixed;
 }
