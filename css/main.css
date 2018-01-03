@@ -3,6 +3,12 @@
   padding: 0px;
 }
 
+body{
+background-image: url("../img/jouet2.jpeg");
+background-attachment:fixed;
+background-size: contain;
+  }
+
 #content{
   width: 80%;
   margin: auto;
@@ -25,11 +31,14 @@
   float: left;
   padding-left: 10px;
   line-height: 80px;
-  
+
 }
-#background img{
-  height:500px;
-  width: auto;
-background-image: url(../IMG/jouet2.jpeg);
-background-attachment:fixed;
-  }
+li{
+  list-style-type: none;
+  background-color:white;
+}
+
+.ul id{
+  border-color: purple;
+  background-color: black;
+}
