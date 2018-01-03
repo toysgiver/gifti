@@ -1,0 +1,38 @@
+.slider{
+    width : 500px;
+    height : 200px;
+    margin: auto;
+    border: 5px solid black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+.slider .slider-content{
+    width : 100%;
+    height: 200px;
+    flex: 1 0 200px;
+    position: relative;
+    left : 0px;
+    transition: left 1s;
+}
+.arrow-left, .arrow-right{
+    width : 50px;
+    height: 50px;
+    background-image: url("../img/arrow.png");
+    position: absolute;
+}
+.arrow-left{
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow-right{
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+.slider img{
+    height: 80px;
+}
