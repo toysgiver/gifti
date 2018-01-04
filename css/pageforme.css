@@ -1,4 +1,20 @@
+/* Class selector*/
 
+.basage{
+    background-color: #f9437d;
+}
+.filles{
+    background-color: pink;
+}
+.garcons{
+    background-color: pink;
+}
+.jeuxvideos{
+    background-color: pink;
+}
+.jeuxdesociete{
+    background-color: pink;
+}
 /*ajout de luc */
 
 #content{
@@ -25,8 +41,24 @@
 }
 
 #affichage_produit div{
+  width: 350px;
   text-align: center;
   font-size: 16px;
   line-height: 25px;
   padding: 5px;
+}
+
+#affichage_produit div img:hover{
+  opacity: 0.5;
+}
+
+#affichage_produit .prix{
+  color: #F57C00;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+#affichage_produit h2{
+  font-size: 20px;
+  font-family: 'Roboto Mono', monospace;
 }
