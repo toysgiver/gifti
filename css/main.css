@@ -12,11 +12,17 @@ body{
 #content{
   width: 80%;
   margin: auto;
+  padding-top:60px;
+  position:relative;
 }
 
 #mainmenu{
   background-color:#FF9800;
+  position:fixed;
+  top:0px;
   height: 60px;
+  width:80%;
+  z-index: 900;
 }
 
 #mainmenu img{
@@ -94,7 +100,22 @@ footer ul li a, footer ul li span{
   font-style: italic;
 }
 
-a.top{
-  position: fixed;
+#top{
+  z-index: 900;
+  position:fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: rgba(255,224,178,0.5);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 1s;
+}
+#top:hover{
+  background-color: rgba(255,224,178,0.9);
+}
 
+
+#top img{
+  transform: rotate(90deg);
+  margin: 10px;
 }
