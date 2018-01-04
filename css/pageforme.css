@@ -48,6 +48,10 @@
   padding: 5px;
 }
 
+#affichage_produit .description{
+    display: none;
+}
+
 #affichage_produit div img:hover{
   opacity: 0.5;
 }
