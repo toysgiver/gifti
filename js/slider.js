@@ -13,11 +13,16 @@ function slideAuto(slider){
 function sliderMove(slider, direction){
     var slide = slider.getElementsByClassName("slider-content");
 
+    //récupère le numero de la slide affiche
     var sliderPosition = slider.getAttribute("rel");
+    //récupère le decallage actuel des slides
     var width = slide[0].offsetWidth;
+    //valeur de décallage des slides
     var left = width*sliderPosition;
 
     //calcul la nouvelle position des slides
+    //si on décalle vers la gauche ou ajoute la valeur de dédecallage
+    //sinon on la soustrait
     if(direction == "left"){
         left += width;
         sliderPosition++;
@@ -50,10 +55,12 @@ function slider(){
     for (var i = 0; i < slider.length; i++){
         var slide = slider[i].getElementsByClassName("slider-content");
 
-        //Ajouter les flêches de défilement
+        //On crée un div et on lui affecte affecte la class correspondant une flêche
+        //Puis on l'ajoute au slider
         var arrowLeft = document.createElement("div");
         arrowLeft.classList.add("arrow-left");
         slider[i].appendChild(arrowLeft);
+
         var arrowRight = document.createElement("div");
         arrowRight.classList.add("arrow-right");
         slider[i].appendChild(arrowRight);
@@ -63,8 +70,9 @@ function slider(){
             slideAuto(slider[i]);
         }
 
-        //Initialise le slider sur une slide aléatoire
+        //On selectionne un slide aléatoirement
         var rand = Math.floor((Math.random() * slide.length));
+        //On décalle les slides jusqu'a afficher celui selectionné
         while(slider[i].getAttribute("rel") != -rand){
             sliderMove(slider[i], "left");
         }
