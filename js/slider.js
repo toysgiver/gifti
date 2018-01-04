@@ -1,7 +1,13 @@
 slider();
 
-function sliderMove(arrow, direction){
-    var slider = arrow.parentNode;
+function slideAuto(slider){
+    var rand = 5000 + Math.floor((Math.random() * 10))*100;
+    setInterval(function(){
+        sliderMove(slider,"right");
+    }, rand);
+}
+
+function sliderMove(slider, direction){
     var slide = slider.getElementsByClassName("slider-content");
 
     var sliderPosition = slider.getAttribute("rel");
@@ -35,7 +41,8 @@ function sliderMove(arrow, direction){
 function slider(){
     var slider = document.getElementsByClassName("slider");
     for (var i = 0; i < slider.length; i++){
-        var slide = slider[i].getElementsByClassName("div");
+        var slide = slider[i].getElementsByClassName("slider-content");
+
         var arrowLeft = document.createElement("div");
         arrowLeft.classList.add("arrow-left");
         slider[i].appendChild(arrowLeft);
@@ -43,15 +50,18 @@ function slider(){
         arrowRight.classList.add("arrow-right");
         slider[i].appendChild(arrowRight);
 
-        // setInterval(function(){
-        //     sliderMove(arrowLeft,"right");
-        // }, 5000);
+        slideAuto(slider[i]);
+
+        var rand = Math.floor((Math.random() * slide.length));
+        while(slider[i].getAttribute("rel") != -rand){
+            sliderMove(slider[i], "left");
+        }
 
         arrowLeft.onclick = function(e){
-            sliderMove(this, "left");
+            sliderMove(this.parentNode, "left");
         };
         arrowRight.onclick = function(e){
-            sliderMove(this, "right");
+            sliderMove(this.parentNode, "right");
         };
     }
 }
