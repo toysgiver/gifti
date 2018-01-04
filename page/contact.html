@@ -17,7 +17,7 @@
   <title>Contact</title>
 </head>
 
-<body class="basage">
+<body>
 
 
   <!-- main content div-->
@@ -50,33 +50,38 @@
       </ul>
     </nav>
     <!-- end top nav bar-->
-
+    <div id="contact">
+      <center>
+      <img src="../img/contact.jpg">
+      </center>
+    </div>
     <br>
 
     <!--contact-->
     <div class="center">
-    				<h1 style="text-align: center"> Contacter Moi!</h1>
+    				<h1 style="text-align: center"> Contactez Nous !</h1>
     </div>
 
-    <div class="container call-center">
-		    <form id="contact" method="post" action="traitement_formulaire.php">
-		    <p>Vos coordonnées</p>
+    <div class="container call-center center">
+		    <form method="post" action="traitement_formulaire.php">
+        <br>
+		    <p>Vos coordonnées :</p>
         <br>
 		 		<p><label for="nom">Nom :</label></p>
         <input class="form-control" type="text" name="nom" tabindex="1" />
-		 		<p><label for="email" >Email :</label></p>
+        <br>
+        <p><label for="email" >Email :</label></p>
         <input class="form-control" type="text" name="email" tabindex="2" />
-
-
-		    	<p>Votre message :</p>
-          <br>
-		    	<p><label for="objet" >Objet :</label></p>
-          <input class="form-control" type="text"  name="objet" tabindex="3" />
-		    	<p><label for="message" >Message :</label></p>
-          <textarea class="form-control" name="message" tabindex="4" cols="30" rows="8"></textarea></p>
-
-
-		    	<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
+        <br>
+		   	<p>Votre message :</p>
+		   	<p><label for="objet" >Objet :</label></p>
+        <input class="form-control" type="text"  name="objet" tabindex="3" />
+        <br>
+		   	<p><label for="message" >Message :</label></p>
+        <textarea class="form-control" name="message" tabindex="4" cols="30" rows="8"></textarea></p>
+        <br>
+	    	<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
+        <br>
 		    </form>
 		  </div>
 
