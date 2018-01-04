@@ -18,27 +18,27 @@ function sliderMove(slider, direction){
     //récupère le decallage actuel des slides
     var width = slide[0].offsetWidth;
     //valeur de décallage des slides
-    var left = width*sliderPosition;
+    var left = -width*sliderPosition;
 
     //calcul la nouvelle position des slides
     //si on décalle vers la gauche ou ajoute la valeur de dédecallage
     //sinon on la soustrait
     if(direction == "left"){
         left += width;
-        sliderPosition++;
+        sliderPosition--;
     }else{
         left -= width;
-        sliderPosition--;
+        sliderPosition++;
     }
 
     //Si l'on est sur la dernière slide on boucle sur la première
     //Si l'on est sur la première on boucle sur la dernière
-    if(sliderPosition == -slide.length){
+    if(sliderPosition == slide.length){
         sliderPosition = 0;
         left = 0;
-    }else if(sliderPosition == 1){
-        sliderPosition = -Number(slide.length-1);
-        left = width*sliderPosition;
+    }else if(sliderPosition < 0){
+        sliderPosition = Number(slide.length-1);
+        left = -width*sliderPosition;
     }
 
     //décallage de tous les slides
@@ -73,7 +73,7 @@ function slider(){
         //On selectionne un slide aléatoirement
         var rand = Math.floor((Math.random() * slide.length));
         //On décalle les slides jusqu'a afficher celui selectionné
-        while(slider[i].getAttribute("rel") != -rand){
+        while(slider[i].getAttribute("rel") != rand){
             sliderMove(slider[i], "left");
         }
 
