@@ -40,16 +40,18 @@
   min-width: 20%;
 }
 
-#affichage_produit div{
+#affichage_produit .produit{
   width: 350px;
   text-align: center;
   font-size: 16px;
   line-height: 25px;
   padding: 5px;
+  border: 0px solid #BDBDBD;
 }
 
 #affichage_produit .description{
     display: none;
+    color: #757575;
 }
 
 #affichage_produit div img:hover{

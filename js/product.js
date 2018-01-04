@@ -11,7 +11,7 @@ function popupProducts(event, elem){
     elem.style.top = Number(screenMidHeight-elemMidHeight)+"px";
     elem.style.left = Number(screenMidWidth-elemMidWidth)+"px";
     elem.style.backgroundColor = "white";
-    elem.style.border = "5px solid #BDBDBD";
+    elem.style.borderWidth = "5px";
     elem.style.borderRadius = "15px";
     elem.style.zIndex = "999";
     elem.getElementsByClassName("description")[0].style.display = "block";
