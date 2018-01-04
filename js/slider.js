@@ -15,7 +15,7 @@ function sliderMove(slider, direction){
 
     //récupère le numero de la slide affiche
     var sliderPosition = slider.getAttribute("rel");
-    //récupère le decallage actuel des slides
+    //récupère la taille d'un slide
     var width = slide[0].offsetWidth;
     //valeur de décallage des slides
     var left = -width*sliderPosition;
