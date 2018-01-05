@@ -45,7 +45,9 @@ body{
   border-left: 1px solid #BDBDBD;
   width: 100px;
   height: 60px;
+  position: relative;
 }
+
 #mainmenu ul li a{
   display: table-cell;
   width: inherit;
@@ -58,9 +60,37 @@ body{
   font-variant: normal;
   font-style: italic;
 }
+
+#mainmenu ul li i{
+    display: table-cell;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    vertical-align: middle;
+    font-size : 30px;
+    cursor: pointer;
+}
+
 #mainmenu ul li a:hover{
   font-weight: bold;
   background-color: rgba(255,224,178,0.3);
+}
+
+#basket{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 300px;
+    height: 0px;
+    background-color: pink;
+    overflow: hidden;
+    transition: height 1s;
+    z-index: 250;
+    background-color: white;
+    border-width: 0px 2px 2px 2px;
+    border-style: solid;
+    border-color: #BDBDBD;
+    border-radius: 0px 0px 0px 30px;
 }
 /*-------------------------fin de la -mise en style de la navbar----------------*/
 
