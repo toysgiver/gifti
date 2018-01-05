@@ -1,0 +1,38 @@
+#index_content{
+  background-color: white;
+  font-family: "tahoma", sans-serif;
+}
+
+#index_content h2,h3{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#index_affichage_produit{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#index_affichage_produit .produit{
+  width: 300px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 0px;
+  margin-top : 20px;
+}
+
+
+#index_affichage_produit .addBasket{
+  display: none;
+}
+
+#index_affichage_produit img{
+  border-radius: 70%;
+  width: 150px;
+  height: 150px;
+  max-width: 80%;
+  min-width: 20%;
+}
