@@ -16,11 +16,6 @@
     background-color: pink;
 }
 /*ajout de luc */
-
-#content{
-  background-color: white;
-}
-
 #affichage_produit{
   display: flex;
   flex-direction: row;
@@ -63,7 +58,28 @@
 #affichage_produit .prix{
   color: #F57C00;
   font-weight: bolder;
+  width: 45%;
   font-size: 22px;
+  display: inline-block;
+}
+
+#affichage_produit .addBasket{
+    width: 45%;
+    display: inline-block;
+    line-height: 20px;
+    background-color: #BDBDBD;
+    border: 1px outset grey;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#affichage_produit .addBasket:hover{
+    font-weight: bold;
+}
+
+#affichage_produit .addBasket:active{
+    font-weight: bold;
+    border: 1px inset grey;
 }
 
 #affichage_produit h2{
