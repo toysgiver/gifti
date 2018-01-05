@@ -41,12 +41,14 @@
 }
 
 #affichage_produit .produit{
-  width: 350px;
+  width: 300px;
   text-align: center;
   font-size: 16px;
   line-height: 25px;
-  padding: 5px;
-  border: 0px solid #BDBDBD;
+  padding: 0px;
+  border: 1px solid #BDBDBD;
+  border-radius: 15px;
+  margin-top : 20px;
 }
 
 #affichage_produit .description{
