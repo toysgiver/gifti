@@ -18,6 +18,7 @@ body{
   margin: auto;
   padding-top:60px;
   position:relative;
+  background-color: white;
 }
                   /*fin de la mise en page du contenu-------------------------*/
 
@@ -136,6 +137,18 @@ footer ul li a, footer ul li span{
 }
 
 #mentions article{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-indent: 50px;
+  line-height: 20px;
+}
+
+#qui-sommes-nous{
+  text-align: justify;
+  padding:8px;
+}
+
+#qui-sommes-nous{
   margin-left: 10px;
   margin-right: 10px;
   text-indent: 50px;
