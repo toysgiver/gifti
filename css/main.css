@@ -131,4 +131,13 @@ footer ul li a, footer ul li span{
                         /*fin de la mise en style du bouton haut de page (back to top)--------*/
 #mentions{
   background-color: white;
+  text-align: justify;
+  padding: 8px;
+}
+
+#mentions article{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-indent: 50px;
+  line-height: 20px;
 }
