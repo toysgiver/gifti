@@ -3,26 +3,19 @@ var showBasket = document.getElementById("showBasket");
 
 basket.setAttribute("id","basket");
 basket.style.top = Number(basket.offsetHeight+60)+"px";
-document.getElementById("content").appendChild(basket);
+document.getElementById("showBasket").appendChild(basket);
+// document.getElementById("content").appendChild(basket);
 
 var left = document.getElementById("content").offsetLeft + document.getElementById("content").offsetWidth - basket.offsetWidth;
 basket.style.left=left+"px";
 
-
-showBasket.parentNode.onclick = function(){
+showBasket.onmouseenter = function(e){
     var height = basket.getElementsByTagName("li").length*55;
-    basket.style.height = height+"px";
-    showBasket.onmouseout = function(e){
-        basket.style.height = "0px";
-    }
-    basket.onmouseenter = function(e){
-        basket.style.height =  height+"px";
-    }
-    basket.onmouseout = function(e){
-        basket.style.height = "0px";
-        basket.onmouseenter = function(e){return false;};
-    }
-}
+    basket.style.height =  height+"px";
+};
+showBasket.onmouseleave = function(e){
+    basket.style.height =  "0px";
+};
 
 function addBasket(elem){
     var basket = document.getElementById("basket");

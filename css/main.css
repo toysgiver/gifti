@@ -76,38 +76,47 @@ body{
   background-color: rgba(255,224,178,0.3);
 }
 
-#basket{
+#mainmenu #basket{
     position: fixed;
     left: 0px;
     width: 300px;
     height: 0px;
     overflow: hidden;
     transition: height 1s;
-    z-index: 250;
+    z-index: 950;
     background-color: white;
     border-width: 0px 2px 2px 2px;
     border-style: solid;
     border-color: #BDBDBD;
     border-radius: 0px 0px 0px 30px;
     list-style-type: none;
+    text-align: left;
+    float: none;
+    clear: both;
 }
 
-#basket li{
+#mainmenu #basket li{
     line-height: 50px;
     height: 50px;
+    float: none;
+    clear: both;
+    border-width: 0px;
+    width: auto;
+    font-size: 18px;
 }
 
-#basket li img{
+#mainmenu #basket li img{
     height: 50px;
     margin-left: 5px;
     margin-right : 10px;
     vertical-align: middle;
 }
 
-#basket li .prix{
+#mainmenu #basket li .prix{
     margin-right : 5px;
     float: right;
 }
+
 
 /*-------------------------fin de la -mise en style de la navbar----------------*/
 
