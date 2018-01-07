@@ -47,8 +47,9 @@ function popupProducts(event, elem){
 var products = document.getElementsByClassName("produit");
 for (var i = 0; i < products.length; i++){
     products[i].onclick = function(e){
-        // if(e.target == this){
-            popupProducts(e, this);
-        // }
+        popupProducts(e, this);
+    };
+    products[i].getElementsByClassName("addBasket")[0].onclick = function(e){
+        addBasket(this.parentNode);
     };
 }
