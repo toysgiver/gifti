@@ -1,1 +1,8 @@
-#memory{}
+#memory, #memory td, #memory tr{
+  border: 1px solid black;
+}
+
+#memory td{
+  height: 50px;
+  width: 50px;
+}
