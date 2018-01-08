@@ -122,47 +122,32 @@ body{
 
                           /*mise en style du pied de page-----------------------*/
 footer{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
   background-color: #ffe0b2;
-  text-align: center;
   text-decoration:none;
   color:#212121;
   font-family: sans-serif;
-  font-variant: normal;
-  font-style: italic;
   margin-bottom: auto;
   width: 100%;
-  height : 60px;
+  height : auto;
+  padding-bottom: 20px;
+}
+footer a, a:hover {
+  text-decoration: none;
+  color: #111;
 }
 
-footer ul{
-  text-decoration-color:black;
+footer li{
+  line-height: 14px;
+  font-size: 12px;
   list-style-type: none;
-  float: right;
-  height : 60px;
+  text-decoration: none;
 }
 
-footer ul li{
-  text-decoration-color:black;
-  text-align: center;
-	margin-right: 20px;
-  float: left;
-  border-left: 1px solid #BDBDBD;
-  width: 90px;
-  height : 60px;
-}
 
-footer ul li a, footer ul li span{
-  display: table-cell;
-  width: inherit;
-  height: inherit;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration:none;
-  color:#212121;
-  font-family: sans-serif;
-  font-variant: normal;
-  font-style: italic;
-}
                     /*fin de la mise en style du pied de page (footer)-------------*/
 
                     /*mise en style du bouton haut de page (back to top )-----------*/
