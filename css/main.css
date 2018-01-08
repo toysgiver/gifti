@@ -133,7 +133,9 @@ footer{
   margin-bottom: auto;
   width: 100%;
   height : auto;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 10px;
 }
 footer a, a:hover {
   text-decoration: none;
@@ -142,7 +144,7 @@ footer a, a:hover {
 
 footer li{
   line-height: 14px;
-  font-size: 12px;
+ ;
   list-style-type: none;
   text-decoration: none;
 }
