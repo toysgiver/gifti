@@ -4,7 +4,7 @@ var player = 1;
 var choixPlayer = new Array( 2 );
 var score = new Array( 2 );
 var grid = new Array( ligne );
-var cardImg = new Array( 16 );
+var cardImg = new Array( 28 );
 
 
 init( ligne, colone );
@@ -94,30 +94,32 @@ function bindEvent() {
 }
 
 function jouer( elem ) {
-  if ( choixPlayer[ 0 ] == null ) {
-    choixPlayer[ 0 ] = elem;
-    elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
-  } else if ( choixPlayer[ 0 ] != elem ) {
-    choixPlayer[ 1 ] = elem;
-    elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
-    //TODO SLEEP
-    if ( !checkChoix() ) {
-      player = ( player == 1 ) ? 2 : 1;
-      choixPlayer[ 0 ].removeAttribute( "style" );
-      choixPlayer[ 1 ].removeAttribute( "style" );
-    } else {
-      choixPlayer[ 0 ].onclick = function () {
-        return false;
-      };
-      choixPlayer[ 1 ].onclick = function () {
-        return false;
-      };
-      score[ player - 1 ]++;
-      checkVictory();
+    if(choixPlayer[1] != null){
+        if ( !checkChoix() ) {
+          choixPlayer[ 0 ].removeAttribute( "style" );
+          choixPlayer[ 1 ].removeAttribute( "style" );
+        }
+        choixPlayer[ 0 ] = null;
+        choixPlayer[ 1 ] = null;
     }
-    choixPlayer[ 0 ] = null;
-    choixPlayer[ 1 ] = null;
-  }
+
+    if ( choixPlayer[ 0 ] == null ) {
+        choixPlayer[ 0 ] = elem;
+        elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
+    } else if ( choixPlayer[ 0 ] != elem ) {
+        choixPlayer[ 1 ] = elem;
+        elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
+        if ( !checkChoix() ) {
+            player = ( player == 1 ) ? 2 : 1;
+            //TODO AFFICHER CHANGEMENT JOUEUR
+        }else{
+            //TODO AFFICHER REJOUER
+            choixPlayer[ 0 ].onclick = function () {return false;};
+            choixPlayer[ 1 ].onclick = function () {return false;};
+            score[ player - 1 ]++;
+            checkVictory();
+        }
+    }
 }
 
 function getImg( elem ) {
