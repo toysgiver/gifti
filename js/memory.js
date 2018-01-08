@@ -1,7 +1,11 @@
 var ligne = 4;
 var colone = 4;
+var player = 1;
 var choixPlayer = new Array( 2 );
+var score = new Array( 2 );
 var grid = new Array( ligne );
+var cardImg = new Array( 20 );
+
 
 init( ligne, colone );
 
@@ -25,9 +29,16 @@ function init( ligne, colone ) {
       grid[ i ][ j ] = null;
     }
   }
+  for ( var i = 0; i < score.length; i++ ) {
+    score[ i ] = 0;
+  }
   initGrid( ( ligne * colone ) );
   logGrid();
   bindEvent();
+  for ( var i = 0; i < cardImg.length; i++ ) {
+    cardImg[ i ] = "../img/cards/" + i + ".jpg";
+  }
+  cardImg = shuffleCard( cardImg );
 }
 
 function initGrid( nbCard ) {
@@ -78,7 +89,6 @@ function bindEvent() {
   for ( var i = 0; i < td.length; i++ ) {
     td[ i ].onclick = function ( e ) {
       jouer( this );
-      console.log( this );
     };
   }
 }
@@ -86,10 +96,29 @@ function bindEvent() {
 function jouer( elem ) {
   if ( choixPlayer[ 0 ] == null ) {
     choixPlayer[ 0 ] = elem;
+    elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
   } else if ( choixPlayer[ 0 ] != elem ) {
     choixPlayer[ 1 ] = elem;
-    checkChoix();
+    elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
+    //TODO SLEEP
+    if ( !checkChoix() ) {
+      player = ( player == 1 ) ? 2 : 1;
+      choixPlayer[ 0 ].removeAttribute( "style" );
+      choixPlayer[ 1 ].removeAttribute( "style" );
+    } else {
+      score[ player - 1 ]++;
+      checkVictory();
+    }
+    choixPlayer[ 0 ] = null;
+    choixPlayer[ 1 ] = null;
   }
+}
+
+function getImg( elem ) {
+  var ligne = elem.parentNode.rowIndex;
+  var colone = elem.cellIndex;
+  var card = grid[ ligne ][ colone ];
+  return cardImg[ card ];
 }
 
 function checkChoix() {
@@ -98,9 +127,16 @@ function checkChoix() {
   var ligne2 = choixPlayer[ 1 ].parentNode.rowIndex;
   var colone2 = choixPlayer[ 1 ].cellIndex;
 
-  // if ( grid[ ligne1 ][ colone1 ] == grid[ ligne2 ][ colone2 ] ) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+  if ( grid[ ligne1 ][ colone1 ] == grid[ ligne2 ][ colone2 ] ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function checkVictory() {
+  if ( score[ 0 ] + score[ 1 ] == ( ligne * colone ) / 2 ) {
+    //TODO AFFICHER VICTOIRE + CODE
+    console.log( "victory" );
+  }
 }
