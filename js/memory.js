@@ -4,7 +4,7 @@ var player = 1;
 var choixPlayer = new Array( 2 );
 var score = new Array( 2 );
 var grid = new Array( ligne );
-var cardImg = new Array( 20 );
+var cardImg = new Array( 16 );
 
 
 init( ligne, colone );
@@ -106,6 +106,12 @@ function jouer( elem ) {
       choixPlayer[ 0 ].removeAttribute( "style" );
       choixPlayer[ 1 ].removeAttribute( "style" );
     } else {
+      choixPlayer[ 0 ].onclick = function () {
+        return false;
+      };
+      choixPlayer[ 1 ].onclick = function () {
+        return false;
+      };
       score[ player - 1 ]++;
       checkVictory();
     }
