@@ -29,6 +29,8 @@ function showHideBasket(basket){
 }
 
 function populateBasket(){
+    var page = window.location.pathname.split("/");
+    page = page[page.length-1];
     var basket = document.getElementById("basket");
     basket.innerHTML = "";
 
@@ -38,9 +40,14 @@ function populateBasket(){
     for (var i = 0; i < panier.length; i++) {
         prix += Number(panier[i][1]);
         var li = document.createElement("li");
+        var img = panier[i][2];
+        console.log("PAGE : "+page);
+        if(page == "index.html"){
+            img = img.substr(1);
+        }
         li.setAttribute("rel",i);
         li.innerHTML = ' \
-            <img src="'+panier[i][2]+'" alt="'+panier[i][0]+'"> \
+            <img src="'+img+'" alt="'+panier[i][0]+'"> \
             <div class="titre">'+panier[i][0]+'</div> \
             <div class="prix">'+panier[i][1]+' &euro;</div> \
             <div class="fa fa-trash-o trash" aria-hidden="true"></div>';
