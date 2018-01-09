@@ -1,6 +1,6 @@
 createBasket();
 
-function createBasket(){
+function createBasket(){ // creation du panier
     var basket = document.createElement("ul");
     var showBasket = document.getElementById("showBasket");
 
@@ -15,7 +15,7 @@ function createBasket(){
     populateBasket();
 }
 
-function showHideBasket(basket){
+function showHideBasket(basket){ // affiche et cache le panier sur mouseover
     var basket = document.getElementById("basket");
     var showBasket = document.getElementById("showBasket");
     showBasket.onmouseenter = function(e){
@@ -28,7 +28,7 @@ function showHideBasket(basket){
 
 }
 
-function populateBasket(){
+function populateBasket(){ // remplit le panier a partir du sessionStorage
     var page = window.location.pathname.split("/");
     page = page[page.length-1];
     var basket = document.getElementById("basket");
@@ -72,7 +72,7 @@ function getBasket(){
     }
 }
 
-function addToBasket(elem){
+function addToBasket(elem){// ajoute l'élément au panier
     var panier = getBasket();
 
     var basket = document.getElementById("basket");
@@ -97,7 +97,7 @@ function addToBasket(elem){
     populateBasket();
 }
 
-function removeFromBasket(id){
+function removeFromBasket(id){ //retire l'élément du panier
     var panier = getBasket();
     panier.splice(id, 1);
     sessionStorage.setItem("panier", JSON.stringify(panier));
