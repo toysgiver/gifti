@@ -50,6 +50,6 @@ for (var i = 0; i < products.length; i++){
         popupProducts(e, this);
     };
     products[i].getElementsByClassName("addBasket")[0].onclick = function(e){
-        addBasket(this.parentNode);
+        addToBasket(this.parentNode);
     };
 }
