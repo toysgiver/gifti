@@ -72,7 +72,7 @@ function addToBasket(elem){
     var basket = document.getElementById("basket");
     var titre = elem.getElementsByTagName("h2")[0].textContent;
     var prix = elem.getElementsByClassName("prix")[0].textContent;
-    prix = prix.substring(0, prix.length-2);
+    prix = prix.substring(0, prix.length-1);
     var img = elem.getElementsByTagName("img")[0].getAttribute("src");
 
     var item = new Array(3);

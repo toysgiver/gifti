@@ -6,7 +6,6 @@ var score = new Array( 2 );
 var grid = new Array( ligne );
 var cardImg = new Array( 28 );
 
-
 init( ligne, colone );
 
 function logGrid() {
@@ -39,6 +38,7 @@ function init( ligne, colone ) {
     cardImg[ i ] = "../img/cards/" + i + ".jpg";
   }
   cardImg = shuffleCard( cardImg );
+  document.getElementById("memoryPlayer").innerHTML = "Joueur "+player+" &agrave; toi de jouer.";
 }
 
 function initGrid( nbCard ) {
@@ -77,11 +77,14 @@ function createGrid( ligne, colone ) {
     table.appendChild( tr );
     for ( var j = 0; j < colone; j++ ) {
       var td = document.createElement( "td" );
-      td.style.width = 100/colone+"%";
-      td.style.height = 100/colone+"%";
       tr.appendChild( td );
     }
   }
+
+  var td = table.getElementsByTagName("td");
+  var style = document.createElement("style");
+  style.innerHTML = "#memory td{width:"+table.offsetWidth/colone+"px; height:"+table.offsetWidth/ligne+"px}";
+  document.getElementsByTagName("head")[0].appendChild(style);
 }
 
 function bindEvent() {
@@ -106,14 +109,15 @@ function jouer( elem ) {
     if ( choixPlayer[ 0 ] == null ) {
         choixPlayer[ 0 ] = elem;
         elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
+        document.getElementById("memoryPlayer").innerHTML = "Joueur "+player+" selectionne une seconde carte.";
     } else if ( choixPlayer[ 0 ] != elem ) {
         choixPlayer[ 1 ] = elem;
         elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
         if ( !checkChoix() ) {
             player = ( player == 1 ) ? 2 : 1;
-            //TODO AFFICHER CHANGEMENT JOUEUR
+            document.getElementById("memoryPlayer").innerHTML = "Joueur "+player+" &agrave; toi de jouer.";
         }else{
-            //TODO AFFICHER REJOUER
+            document.getElementById("memoryPlayer").innerHTML = "Joueur "+player+" tu peux rejouer.";
             choixPlayer[ 0 ].onclick = function () {return false;};
             choixPlayer[ 1 ].onclick = function () {return false;};
             score[ player - 1 ]++;
@@ -146,48 +150,21 @@ function checkVictory() {
   if ( score[ 0 ] + score[ 1 ] == ( ligne * colone ) / 2 ) {
     //TODO AFFICHER VICTOIRE + CODE
     console.log( "victory" );
+    console.log(getCoupon());
   }
 }
 
-// script luc 
-// create fonction and parameter
-
+function chaineAleatoire() {
+    var length = '';
     var charSet = charSet || '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var length1 = '';
-    var length2 = '';
-    var length3 = '';
-
-function chaine1Aleatoire() {
     for (var i = 0; i < 4; i++) {
         var randomPoz = Math.floor(Math.random() * charSet.length);
-        length1 += charSet.substring(randomPoz,randomPoz+1)
-	document.getElementById("p1").innerHTML = length1;
+        length += charSet[randomPoz];
 	}
-    return length1;
+    return length;
 }
 
-
-function chaine2Aleatoire() {
-    for (var i = 0; i < 4; i++) {
-        var randomPoz = Math.floor(Math.random() * charSet.length);
-        length2 += charSet.substring(randomPoz,randomPoz+1)
-	document.getElementById("p2").innerHTML = length2;
-	}
-    return length2;
-}
-
-function chaine3Aleatoire() {
-    for (var i = 0; i < 4; i++) {
-        var randomPoz = Math.floor(Math.random() * charSet.length);
-        length3 += charSet.substring(randomPoz,randomPoz+1)
-	document.getElementById("p3").innerHTML = length3;
-	}
-    return length3;
-}
-
-
-function symboleAleatoire(coupon){
-	coupon = chaine1Aleatoire()+'-'+chaine1Aleatoire()+'-'+chaine1Aleatoire()+'-2018';
-	console.log(coupon);
+function getCoupon(){
+	coupon = chaineAleatoire()+'-'+chaineAleatoire()+'-'+chaineAleatoire()+'-2018';
 	return coupon;
 }

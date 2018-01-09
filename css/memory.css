@@ -3,10 +3,18 @@
 }
 
 #memory{
-    width: 80%;
+    width: 40%;
     margin: auto;
 }
 
 #memory td{
   background-size: 100% 100%;
+}
+
+#memoryPlayer{
+    width: 40%;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;   
 }
