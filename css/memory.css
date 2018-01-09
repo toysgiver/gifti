@@ -18,11 +18,13 @@
 }
 
 #memoryPlayer{
-    width: 40%;
+    width: 25%;
     margin: auto;
-    font-size: 18px;
+    font-size: 25px;
     text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 70%;
+    right: 30px;
 }
 
 #memoryScore{
@@ -30,7 +32,7 @@
     border-collapse: collapse;
     position: absolute;
     top: 30%;
-    right: 30px;
+    right: 55px;
 }
 
 #memoryScore tr{
