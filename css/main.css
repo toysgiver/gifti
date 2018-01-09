@@ -189,19 +189,29 @@ footer li{
   transform: rotate(90deg);
   margin: 10px;
 }
-                        /*fin de la mise en style du bouton haut de page (back to top)--------*/
+/*fin de la mise en style du bouton haut de page (back to top)--------*/
 #mentions{
   background-color: white;
   text-align: justify;
   padding: 8px;
 }
 
+#mentions h2{
+  margin: 25px 0px;
+}
+
+#mentions h3{
+  text-indent: 20px;
+  margin: 15px 0px;
+}
+
 #mentions article{
-  margin-left: 10px;
-  margin-right: 15px;
-  text-indent: 70px;
+  text-indent: 40px;
   line-height: 25px;
-  margin-top: 20px;
+}
+
+#mentions ul{
+  list-style-type: none;
 }
 
 #qui-sommes-nous{
@@ -209,6 +219,21 @@ footer li{
   padding:8px;
 }
 
+#qui-sommes-nous{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-indent: 50px;
+  line-height: 20px;
+}
+
+#article{
+  text-indent: 40px;
+  line-height: 25px;
+
+}
+#article h2{
+    margin: 25px 0px;
+}
 #qui-sommes-nous{
   margin-left: 10px;
   margin-right: 10px;
