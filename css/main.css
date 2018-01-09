@@ -12,19 +12,20 @@ body{
 #content, #mainmenu{
     width: 80%;
     min-width : 1050px;
+    background-color: hsla(0, 0%, 80%,0.6);
 }
 
 #content{
   margin: auto;
   padding-top:60px;
   position:relative;
-  background-color: white;
+ 
 }
                   /*fin de la mise en page du contenu-------------------------*/
 
                   /*mise en style de la navbar---------------------------------*/
 #mainmenu{
-  background-color:#FF9800;
+  background-color:#33bbff;
   position:fixed;
   top:0px;
   height: 60px;
@@ -55,10 +56,9 @@ body{
   text-align: center;
   vertical-align: middle;
   text-decoration:none;
-  color:#212121;
+  color:#fff;
   font-family: sans-serif;
   font-variant: normal;
-  font-style: italic;
 }
 
 #mainmenu ul li i{

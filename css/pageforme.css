@@ -1,19 +1,19 @@
 /* Class selector*/
 
-.basage{
+.basage .addBasket{
+    background-color: #ffffcc;
+}
+.filles .addBasket{
     background-color: #f9437d;
 }
-.filles{
-    background-color: pink;
+.garcons .addBasket{
+    background-color: #66b3ff;
 }
-.garcons{
-    background-color: pink;
+.jeuxvideos .addBasket{
+    background-color: #aaff80;
 }
-.jeuxvideos{
-    background-color: pink;
-}
-.jeuxdesociete{
-    background-color: pink;
+.jeuxdesociete .addBasket{
+    background-color: #ffb3ff;
 }
 /*ajout de luc */
 #affichage_produit{
@@ -44,6 +44,7 @@
   border: 1px solid #BDBDBD;
   border-radius: 15px;
   margin-top : 20px;
+  background-color: #fff;
 }
 
 #affichage_produit .description{
@@ -67,7 +68,6 @@
     width: 45%;
     display: inline-block;
     line-height: 20px;
-    background-color: #BDBDBD;
     border: 1px outset grey;
     border-radius: 25px;
     cursor: pointer;
