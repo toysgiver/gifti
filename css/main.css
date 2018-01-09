@@ -98,6 +98,7 @@ body{
 #mainmenu #basket li{
     line-height: 50px;
     height: 50px;
+    width: 100%;
     float: none;
     clear: both;
     border-width: 0px;
@@ -107,14 +108,30 @@ body{
 
 #mainmenu #basket li img{
     height: 50px;
-    margin-left: 5px;
-    margin-right : 10px;
-    vertical-align: middle;
+}
+
+#mainmenu #basket li .titre{
+    height: 50px;
+    width: 170px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #mainmenu #basket li .prix{
-    margin-right : 5px;
-    float: right;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#mainmenu #basket li .trash{
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
