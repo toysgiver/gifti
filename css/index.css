@@ -1,5 +1,4 @@
 #index_content{
-  background-color: white;
   font-family: "tahoma", sans-serif;
 }
 
@@ -24,6 +23,7 @@
   line-height: 25px;
   padding: 0px;
   margin-top : 20px;
+  background-color: #fff;
 }
 
 
