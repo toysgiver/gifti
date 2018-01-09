@@ -41,7 +41,6 @@ function populateBasket(){
         prix += Number(panier[i][1]);
         var li = document.createElement("li");
         var img = panier[i][2];
-        console.log("PAGE : "+page);
         if(page == "index.html"){
             img = img.substr(1);
         }
@@ -81,11 +80,17 @@ function addToBasket(elem){
     var prix = elem.getElementsByClassName("prix")[0].textContent;
     prix = prix.substring(0, prix.length-1);
     var img = elem.getElementsByTagName("img")[0].getAttribute("src");
+    var page = window.location.pathname.split("/");
+    page = page[page.length-1];
 
     var item = new Array(3);
     item[0] = titre;
     item[1] = prix;
-    item[2] = img;
+    if(page == "index.html"){
+        item[2] = "."+img;
+    }else{
+        item[2] = img;
+    }
     panier.push(item);
     sessionStorage.setItem("panier", JSON.stringify(panier));
 

@@ -6,11 +6,21 @@
     text-align: center;
     font-family: 'Indie Flower', cursive;
     margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    font-size : 32px;
 }
 
 #index_content h4{
   text-align: center;
   background-color: #819FF7;
+}
+
+#index_affichage_produit h2{
+    margin-top: 0px;
+    background-color: #819FF7;
+    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #index_affichage_produit{
