@@ -17,6 +17,7 @@
 
 #index_affichage_produit .produit{
   border: 1px solid black;
+  border-radius: 5px;
   width: 300px;
   text-align: center;
   font-size: 16px;

@@ -148,3 +148,46 @@ function checkVictory() {
     console.log( "victory" );
   }
 }
+
+// script luc 
+// create fonction and parameter
+
+    var charSet = charSet || '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var length1 = '';
+    var length2 = '';
+    var length3 = '';
+
+function chaine1Aleatoire() {
+    for (var i = 0; i < 4; i++) {
+        var randomPoz = Math.floor(Math.random() * charSet.length);
+        length1 += charSet.substring(randomPoz,randomPoz+1)
+	document.getElementById("p1").innerHTML = length1;
+	}
+    return length1;
+}
+
+
+function chaine2Aleatoire() {
+    for (var i = 0; i < 4; i++) {
+        var randomPoz = Math.floor(Math.random() * charSet.length);
+        length2 += charSet.substring(randomPoz,randomPoz+1)
+	document.getElementById("p2").innerHTML = length2;
+	}
+    return length2;
+}
+
+function chaine3Aleatoire() {
+    for (var i = 0; i < 4; i++) {
+        var randomPoz = Math.floor(Math.random() * charSet.length);
+        length3 += charSet.substring(randomPoz,randomPoz+1)
+	document.getElementById("p3").innerHTML = length3;
+	}
+    return length3;
+}
+
+
+function symboleAleatoire(coupon){
+	coupon = chaine1Aleatoire()+'-'+chaine1Aleatoire()+'-'+chaine1Aleatoire()+'-2018';
+	console.log(coupon);
+	return coupon;
+}
