@@ -38,6 +38,7 @@
   border-radius: 0px 0px 15px 15px;
   margin-top : 20px;
   background-color: #fff;
+  padding-bottom: 5px;
 }
 
 #affichage_produit img, #produitPopup img{
@@ -69,6 +70,7 @@
   width: 45%;
   font-size: 16px;
   display: inline-block;
+  text-align: center;
 }
 
 #affichage_produit .addBasket, #produitPopup .addBasket{
@@ -78,6 +80,7 @@
     border: 1px solid black;
     border-radius: 25px;
     cursor: pointer;
+    text-align: center;
 }
 
 #affichage_produit .addBasket:hover, #produitPopup .addBasket:hover{
@@ -90,19 +93,33 @@
 }
 
 #produitPopup{
-    width : auto;
+    width : 700px;
     position: fixed;
     background-color: white;
     border-width: 5px;
     z-index: 999;
+    text-align: left;
+    padding-bottom: 10px;
 }
+
 #produitPopup img{
     width: 400px;
     height: auto;
 }
+
 #produitPopup .description{
     display: block;
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    width : 300px;
 }
+
+#produitPopup .prix{
+    font-size: 25px;
+    font-weight: bold;
+}
+
 #backPopup{
     position : fixed;
     top : 0px;
