@@ -6,6 +6,13 @@ var score = new Array( 2 );
 var grid = new Array( ligne );
 var cardImg = new Array( 28 );
 
+document.getElementById("memoryPlayer").innerHTML = "";
+var pop = document.createElement("div");
+pop.classList.add("memoryVictory");
+pop.innerHTML = "Félicitation Joueur "+player+".<br/>Voici votre code promo : <br/>"+getCoupon();
+console.log(pop);
+document.getElementById("content").appendChild(pop);
+
 init( ligne, colone );
 
 function logGrid() {
@@ -121,9 +128,16 @@ function jouer( elem ) {
             choixPlayer[ 0 ].onclick = function () {return false;};
             choixPlayer[ 1 ].onclick = function () {return false;};
             score[ player - 1 ]++;
+            refreshScore();
             checkVictory();
         }
     }
+}
+
+function refreshScore(){
+    var scoreTab = document.getElementById("memoryScore").getElementsByTagName("td");
+    scoreTab[2].innerHTML = score[0];
+    scoreTab[3].innerHTML = score[1];
 }
 
 function getImg( elem ) {
@@ -148,9 +162,10 @@ function checkChoix() {
 
 function checkVictory() {
   if ( score[ 0 ] + score[ 1 ] == ( ligne * colone ) / 2 ) {
-    //TODO AFFICHER VICTOIRE + CODE
-    console.log( "victory" );
-    console.log(getCoupon());
+    document.getElementById("memoryPlayer").innerHTML = "";
+    var pop = document.createElement("div");
+    pop.classList.add("memoryVictory");
+    pop.innerHTML = "Félicitation Joueur "+player+".<br/>Voici votre code promo : <br/>"+getCoupon();
   }
 }
 
