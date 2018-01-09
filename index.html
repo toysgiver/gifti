@@ -1,193 +1,214 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/slider.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- font import google-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <script src="./js/main.js"></script>
-    <title>challenge groupé</title>
-  </head>
-    <body>
-              <!-- le contenu de la navbar -->
-    <div id="content">
-      <!-- top nav bar-->
-        <nav id="mainmenu">
-            <a href="index.html"><img src="./img/logo.png" alt="Logo" /></a>
+
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="./css/main.css">
+      <link rel="stylesheet" href="./css/slider.css">
+      <link rel="stylesheet" href="./css/index.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- font import google-->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+      <script src="./js/main.js"></script>
+      <title>challenge groupé</title>
+   </head>
+
+   <body>
+      <!-- le contenu de la navbar -->
+      <div id="content">
+         <!-- top nav bar-->
+         <nav id="mainmenu">
+            <a href="index.html">
+               <img src="./img/logo.png" alt="Logo" />
+            </a>
             <ul>
-                <li>
+               <li>
                   <a href="index.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="./page/basage.html">-5ans</a>
-                </li>
-                <li>
-                    <a href="./page/filles.html">Filles</a>
-                </li>
-                <li>
-                    <a href="./page/garcons.html">Garçons</a>
-                </li>
-                <li>
-                    <a href="./page/jeuxdesociete.html">Jeux de Société</a>
-                </li>
-                <li>
-                    <a href="./page/jeuxvideos.html">Jeux Vidéos</a>
-                </li>
-                <li>
-                    <a href="./page/reduction.html">Codes Promo</a>
-                </li>
-                <li>
+               </li>
+               <li>
+                  <a href="./page/basage.html">-5ans</a>
+               </li>
+               <li>
+                  <a href="./page/filles.html">Filles</a>
+               </li>
+               <li>
+                  <a href="./page/garcons.html">Garçons</a>
+               </li>
+               <li>
+                  <a href="./page/jeuxdesociete.html">Jeux de Société</a>
+               </li>
+               <li>
+                  <a href="./page/jeuxvideos.html">Jeux Vidéos</a>
+               </li>
+               <li>
+                  <a href="./page/reduction.html">Codes Promo</a>
+               </li>
+               <li>
                   <a href="./page/contact.html">Contact</a>
-                </li>
-                <li>
-                    <i class="fa fa-shopping-basket" id="showBasket" aria-hidden="true"></i>
-                </li>
+               </li>
+               <li>
+                  <i class="fa fa-shopping-basket" id="showBasket" aria-hidden="true"></i>
+               </li>
             </ul>
-        </nav>
-      <!-- end top nav bar-->
+         </nav>
+         <!-- end top nav bar-->
+         <div id="index_content">
+            <!--slider-->
 
-<div id="index_content">
+            <section>
+               <div class="slider auto" rel="0">
+                  <div class="slider-content">
+                     <img src="./img/slider_img/slider_1.jpg" alt="">
+                  </div>
+                  <div class="slider-content">
+                     <img src="./img/slider_img/slider_2.jpg" alt="">
+                  </div>
+                  <div class="slider-content">
+                     <img src="./img/slider_img/slider_3.jpg" alt="">
+                  </div>
+               </div>
+            </section>
+            <!--end slider-->
+            <br>
+            <br>
 
+            <section>
+               <div style="margin-left: 20px;">
+                  <h2 style="text-align: left">En ce moment chez Gifti</h2>
+                  <div id="index_affichage_produit">
+                     <div class="produit">
+                        <h4>Puzzle 3D</h4>
+                        <img src="./img/produits/basage/items1.jpg">
+                        <div class="prix">40&euro;</div>
+                        <i class="fa fa-shopping-cart addBasket"
+                          aria-hidden="true"> Ajouter</i>
+                     </div>
+                     <div class="produit">
+                        <h4>Princess</h4>
+                        <img src="./img/produits/filles/items1.jpg">
+                        <div class="prix">90&euro;</div>
+                        <i class="fa fa-shopping-cart addBasket"
+                          aria-hidden="true"> Ajouter</i>
+                     </div>
+                     <div class="produit">
+                        <h4>Dissidia N</h4>
+                        <img src="./img/produits/jeuxvideos/items1.jpg">
+                        <div class="prix">50&euro;</div>
+                        <i class="fa fa-shopping-cart addBasket"
+                          aria-hidden="true"> Ajouter</i>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <br>
 
-    <!--slider-->
-    <section>
-      <div class="slider auto" rel="0">
-        <div class="slider-content"><img src="./img/slider_img/slider_1.jpg" alt=""></div>
-        <div class="slider-content"><img src="./img/slider_img/slider_2.jpg" alt=""></div>
-        <div class="slider-content"><img src="./img/slider_img/slider_3.jpg" alt=""></div>
-      </div>
-    </section>
-    <!--end slider-->
+            <section>
+               <div style="margin-left: 20px">
+                  <h2 style="text-align: center">Selection
+                     <srong>Noël</strong>
+                  </h2>
+                  <div id="index_affichage_produit">
+                     <div class="produit">
+                        <h4>Set de Figurine</h4>
+                        <img src="./img/produits/garçons/items3.jpg">
+                        <div class="prix">45&euro;</div>
+                        <i class="fa fa-shopping-cart addBasket"
+                          aria-hidden="true"> Ajouter</i>
+                     </div>
+                     <div class="produit">
+                        <h4>Les Aventurier du Rail</h4>
+                        <img src="./img/produits/jeuxdesociete/items4.jpg">
+                        <div class="prix">50&euro;</div>
+                        <i class="fa fa-shopping-cart addBasket"
+                          aria-hidden="true"> Ajouter</i>
+                     </div>
+                     <div class="produit">
+                        <h4>World of Warrior</h4>
+                        <img src="./img/produits/jeuxvideos/items4.jpg">
+                        <div class="prix">50&euro;</div>
+                        <i class="fa fa-shopping-cart addBasket"
+                          aria-hidden="true"> Ajouter</i>
+                     </div>
+                  </div>
+               </div>
+            </section>
 
-<br>
+            <section>
+               <center>
+                  <div id="index_affichage_info">
+                     <h2>Gifti, c'est aussi...</h2>
+                     <div>
+                        <div>
+                           <p style="background-color: #666; color: white">Gifti, 40 ans de passions</p>
+                           <p>Le premier magasin
+                              <strong>Gifti a en effet ouvert ses portes en 1977</strong>
+                              à Englos autour du concept original de
+                              <strong>
+                              "grand magasin du jouet et du loisir créatif en
+                                 libre-service</p>
+                        </div>
+                     </div>
+                  </div>
+               </center>
+            </section>
+         </div>
+         <!--haut de page -->
+         <div id="top" onclick="backTop()">
+            <img src="./img/arrow.png">
+         </div>
+         <!-- en haut de page-->
 
-<br>
-
-<section>
-  <div style="margin-left: 20px;">
-    <h2 style="text-align: left">En ce moment chez Gifti</h2>
-    <div id="index_affichage_produit">
-      <div class="produit">
-        <h4>Puzzle 3D</h4>
-        <img src="./img/produits/basage/items1.jpg">
-        <div class="prix">40&euro;</div>
-        <i class="fa fa-shopping-cart addBasket" aria-hidden="true"> Ajouter</i>
-      </div>
-      <div class="produit">
-        <h4>Princess</h4>
-        <img src="./img/produits/filles/items1.jpg">
-        <div class="prix">90&euro;</div>
-        <i class="fa fa-shopping-cart addBasket" aria-hidden="true"> Ajouter</i>
-      </div>
-      <div class="produit">
-        <h4>Dissidia N</h4>
-        <img src="./img/produits/jeuxvideos/items1.jpg">
-        <div class="prix">50&euro;</div>
-        <i class="fa fa-shopping-cart addBasket" aria-hidden="true"> Ajouter</i>
-      </div>
-    </div>
-    </div>
-</section>
-
-<br>
-
-<section>
-  <div style="margin-left: 20px">
-    <h2 style="text-align: center">Selection <srong>Noël</strong></h2>
-    <div id="index_affichage_produit">
-      <div class="produit">
-        <h4>Set de Figurine</h4>
-        <img src="./img/produits/garçons/items3.jpg">
-       <div class="prix">45&euro;</div>
-        <i class="fa fa-shopping-cart addBasket" aria-hidden="true"> Ajouter</i>
-      </div>
-      <div class="produit">
-        <h4>Les Aventurier du Rail</h4>
-        <img src="./img/produits/jeuxdesociete/items4.jpg">
-         <div class="prix">50&euro;</div>
-        <i class="fa fa-shopping-cart addBasket" aria-hidden="true"> Ajouter</i>
-      </div>
-      <div class="produit">
-        <h4>World of Warrior</h4>
-        <img src="./img/produits/jeuxvideos/items4.jpg">
-        <div class="prix">50&euro;</div>
-        <i class="fa fa-shopping-cart addBasket" aria-hidden="true"> Ajouter</i>
-      </div>
-    </div>
-    </div>
-</section>
-
-
-<section>
-  <center>
-  <div id="index_affichage_info">
-    <h2>Gifti, c'est aussi...</h2>
-    <div>
-      <div>
-      <p style="background-color: #666; color: white">Gifti, 40 ans de passions</p>
-      <p>Le premier magasin <strong>Gifti a en effet ouvert ses portes en 1977</strong>
-         à Englos autour du concept original de <strong>
-           "grand magasin du jouet et du loisir créatif en libre-service</p>
-     </div>
-    </div>
-  </div>
-</center>
-</section>
-<br>
-
-
-</div>
-
-
-        <!--haut de page -->
-        <div id="top" onclick="backTop()"><img src="./img/arrow.png"></div>
-        <!-- en haut de page-->
-
-        <footer>
-          <!-- logo-->
-          <div>
-            <img src="./img/logo.png" alt="Logo" style="width:100px; height: auto;">
-          </div>
-          <!--end logo-->
-          <div>
-            <p>Gifti</p>
-            <p>10 avenue des carreaux</p>
-            <p>62200 Cedex </p>
-            <p>Tel : 03 21 00 00 00</p>
-            <p>Horaire d'ouverture: 8h00 - 17h00</p>
-          </div>
-
-<!--plan site-->
-          <div>
-            <ul>
-            <li><a href="./page/mentionslegales.html" target="_blank">Mentions Légales</a></li>
-            <li><a href="./page/quisommenous.html" target="_blank">Qui sommes-nous</a></li>
-            <li><a href="./page/contact.html" target="_blank"> Contact</a></li>
-            </ul>
-          </div>
-<!--end plan site-->
-
-<!--reseaux sociaux-->
-          <div>
-            <ul>
-              <li style="padding: 5px">Suivez-nous sur:</li>
-              <a href="https://www.Facebook.com/BoutiqueGifti/" target="_blank"><i class="fa fa-facebook-official" style="font-size:32px;color:blue; vertical-align: middle"></i> </a>
-              <a href="https://www.instagram.com/BoutiqueGifti/" target="_blank"><i class="fa fa-instagram" style="font-size:32px;color:purple; vertical-align: middle"></i> </a>
-              <a href="https://www.twitter.com/Gifti49765724/" target="_blank"><i class="fa fa-twitter" style="font-size:32px;color:blue; vertical-align: middle"></i></a>
-            </ul>
+         <footer>
+            <!-- logo-->
+            <div>
+               <img src="./img/logo.png" alt="Logo" style="width:100px; height: auto;"> </div>
+            <!--end logo-->
+            <div>
+               <p>Gifti</p>
+               <p>10 avenue des carreaux</p>
+               <p>62200 Cedex </p>
+               <p>Tel : 03 21 00 00 00</p>
+               <p>Horaire d'ouverture: 8h00 - 17h00</p>
             </div>
-<!-- end reseaux sociaux-->
-        </footer>
+            <!--plan site-->
+            <div>
+               <ul>
+                  <li>
+                     <a href="./page/mentionslegales.html" target="_blank">Mentions Légales</a>
+                  </li>
+                  <li>
+                     <a href="./page/quisommenous.html" target="_blank">Qui sommes-nous</a>
+                  </li>
+                  <li>
+                     <a href="./page/contact.html" target="_blank"> Contact</a>
+                  </li>
+               </ul>
+            </div>
+            <!--end plan site-->
+            <!--reseaux sociaux-->
+            <div>
+               <ul>
+                  <li style="padding: 5px">Suivez-nous sur:</li>
+                  <a href="https://www.Facebook.com/BoutiqueGifti/"
+                    target="_blank">
+                     <i class="fa fa-facebook-official" style="font-size:32px;color:blue; vertical-align: middle"></i>
+                  </a>
+                  <a href="https://www.instagram.com/BoutiqueGifti/" target="_blank">
+                     <i class="fa fa-instagram" style="font-size:32px;color:purple; vertical-align: middle"></i>
+                  </a>
+                  <a href="https://www.twitter.com/Gifti49765724/" target="_blank">
+                     <i class="fa fa-twitter" style="font-size:32px;color:blue; vertical-align: middle"></i>
+                  </a>
+               </ul>
+            </div>
+            <!-- end reseaux sociaux-->
+         </footer>
+      </div>
+      <!--script-->
+      <script src="./js/slider.js"></script>
+      <script src="./js/product.js"></script>
+      <script src="./js/basket.js"></script>
+   </body>
 
-    </div>
-
-<!--script-->
-<script src="./js/slider.js"></script>
-<script src="./js/product.js"></script>
-<script src="./js/basket.js"></script>
-</body>
 </html>

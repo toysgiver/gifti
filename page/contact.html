@@ -1,144 +1,163 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/pageforme.css">
-  <link rel="stylesheet" href="../css/contact.css">
-  <!--awesome css import-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--end awesome css import-->
-  <!--google font import-->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <!--end google font import-->
-  <script src="../js/main.js"></script>
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="../css/main.css">
+      <link rel="stylesheet" href="../css/pageforme.css">
+      <link rel="stylesheet" href="../css/contact.css">
+      <!--awesome css import-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--end awesome css import-->
+      <!--google font import-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+        rel="stylesheet">
+      <!--end google font import-->
+      <script src="../js/main.js"></script>
+      <title>Contact</title>
+   </head>
 
-  <title>Contact</title>
-</head>
-
-<body>
-
-
-  <!-- main content div-->
-  <div id="content">
-    <!-- top nav bar-->
-      <nav id="mainmenu">
-          <a href="../index.html"><img src="../img/logo.png" alt="Logo" /></a>
-          <ul>
-            <li>
+   <body>
+      <!-- main content div-->
+      <div id="content">
+         <!-- top nav bar-->
+         <nav id="mainmenu">
+            <a href="../index.html">
+               <img src="../img/logo.png" alt="Logo" />
+            </a>
+            <ul>
+               <li>
                   <a href="../index.html">Accueil</a>
-            </li>
-              <li>
+               </li>
+               <li>
                   <a href="basage.html">-5ans</a>
-              </li>
-              <li>
+               </li>
+               <li>
                   <a href="filles.html">Filles</a>
-              </li>
-              <li>
+               </li>
+               <li>
                   <a href="garcons.html">Garçons</a>
-              </li>
-              <li>
+               </li>
+               <li>
                   <a href="jeuxdesociete.html">Jeux de société</a>
-              </li>
-              <li>
+               </li>
+               <li>
                   <a href="jeuxvideos.html">Jeu Vidéos</a>
-              </li>
-              <li>
-                  <a href="reduction.html">Je gagne mes réductions</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
-              </li>
-              <li>
+               </li>
+               <li>
+                  <a href="reduction.html">Codes Promo</a>
+               </li>
+               <li>
+                  <a href="contact.html">Contact</a>
+               </li>
+               <li>
                   <i class="fa fa-shopping-basket" id="showBasket" aria-hidden="true"></i>
-              </li>
-          </ul>
-      </nav>
-    <!-- end top nav bar-->
+               </li>
+            </ul>
+         </nav>
+         <!-- end top nav bar-->
+         <div id="contact">
+            <center>
+               <img src="../img/contact.png"> </center>
+         </div>
+         <br>
+         <!--contact-->
+         <div class="center">
+            <h1 style="text-align: center"> Contactez Nous !</h1>
+         </div>
+         <div class="container call-center center">
+            <form method="post" action="traitement_formulaire.html">
+               <br>
+               <p>Vos coordonnées :</p>
+               <br>
+               <p>
+                  <label for="nom">Nom :</label>
+               </p>
+               <input class="form-control" type="text" name="nom" tabindex="1"
+               />
+               <br>
+               <p>
+                  <label for="email">Email :</label>
+               </p>
+               <input class="form-control" type="text" name="email" tabindex="2"
+               />
+               <br>
+               <p>
+                  <label for="objet">Objet :</label>
+               </p>
+               <input class="form-control" type="text" name="objet" tabindex="3"
+               />
+               <br>
+               <p>
+                  <label for="message">Message :</label>
+               </p>
+               <textarea class="form-control" name="message" tabindex="4" cols="30"
+                 rows="8"></textarea>
+               </p>
+               <br>
+               <div style="text-align:center;">
+                  <input type="submit" name="envoi" value="Envoyer le formulaire !"
+                  />
+               </div>
+               <br> </form>
+         </div>
+         <!--end contact -->
+         <br>
+         <!--haut de page -->
+         <div id="top" onclick="backTop()">
+            <img src="../img/arrow.png">
+         </div>
+         <!-- en haut de page-->
 
-    <div id="contact">
-      <center>
-      <img src="../img/contact.png">
-      </center>
-    </div>
-    <br>
-
-    <!--contact-->
-    <div class="center">
-    				<h1 style="text-align: center"> Contactez Nous !</h1>
-    </div>
-
-    <div class="container call-center center">
-		    <form method="post" action="traitement_formulaire.html">
-        <br>
-		    <p>Vos coordonnées :</p>
-        <br>
-		 		<p><label for="nom">Nom :</label></p>
-        <input class="form-control" type="text" name="nom" tabindex="1" />
-        <br>
-        <p><label for="email" >Email :</label></p>
-        <input class="form-control" type="text" name="email" tabindex="2" />
-        <br>
-		   	<p><label for="objet" >Objet :</label></p>
-        <input class="form-control" type="text"  name="objet" tabindex="3" />
-        <br>
-		   	<p><label for="message" >Message :</label></p>
-        <textarea class="form-control" name="message" tabindex="4" cols="30" rows="8"></textarea></p>
-        <br>
-	    	<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer le formulaire !" /></div>
-        <br>
-		    </form>
-		  </div>
-
-    <!--end contact -->
-      <br>
-      <!--haut de page -->
-      <div id="top" onclick="backTop()"><img src="../img/arrow.png"></div>
-      <!-- en haut de page-->
-
-      <footer>
-        <!-- logo-->
-        <div>
-          <img src="../img/logo.png" alt="Logo" style="width:100px; height: auto;">
-        </div>
-        <!--end logo-->
-        <div>
-          <p>Gifti</p>
-          <p>10 avenue des carreaux</p>
-          <p>62200 Cedex </p>
-          <p>Tel : 03 21 00 00 00</p>
-          <p>Horaire d'ouverture: 8h00 - 17h00</p>
-        </div>
-
-    <!--plan site-->
-        <div>
-          <ul>
-            <li><a href="mentionslegales.html" target="_blank">Mentions Légales</a></li>
-            <li><a href="quisommenous.html" target="_blank">Qui sommes-nous</a></li>
-            <li><a href="contact.html" target="_blank"> Contact</a></li>
-          </ul>
-        </div>
-    <!--end plan site-->
-
-    <!--reseaux sociaux-->
-        <div>
-          <ul>
-            <li style="padding: 5px">Suivez-nous sur:</li>
-            <a href="https://www.Facebook.com/BoutiqueGifti/" target="_blank"><i class="fa fa-facebook-official" style="font-size:32px;color:blue; vertical-align: middle"></i> </a>
-            <a href="https://www.instagram.com/BoutiqueGifti/" target="_blank"><i class="fa fa-instagram" style="font-size:32px;color:purple; vertical-align: middle"></i> </a>
-            <a href="https://www.twitter.com/Gifti49765724/" target="_blank"><i class="fa fa-twitter" style="font-size:32px;color:blue; vertical-align: middle"></i></a>
-          </ul>
-          </div>
-    <!-- end reseaux sociaux-->
-      </footer>
-
-
-
-  </div>
-  <!-- end main content div-->
-  <script src="../js/slider.js"></script>
-  <script src="../js/basket.js"></script>
-</body>
+         <footer>
+            <!-- logo-->
+            <div>
+               <img src="../img/logo.png" alt="Logo" style="width:100px; height: auto;"> </div>
+            <!--end logo-->
+            <div>
+               <p>Gifti</p>
+               <p>10 avenue des carreaux</p>
+               <p>62200 Cedex </p>
+               <p>Tel : 03 21 00 00 00</p>
+               <p>Horaire d'ouverture: 8h00 - 17h00</p>
+            </div>
+            <!--plan site-->
+            <div>
+               <ul>
+                  <li>
+                     <a href="mentionslegales.html" target="_blank">Mentions Légales</a>
+                  </li>
+                  <li>
+                     <a href="quisommenous.html" target="_blank">Qui sommes-nous</a>
+                  </li>
+                  <li>
+                     <a href="contact.html" target="_blank"> Contact</a>
+                  </li>
+               </ul>
+            </div>
+            <!--end plan site-->
+            <!--reseaux sociaux-->
+            <div>
+               <ul>
+                  <li style="padding: 5px">Suivez-nous sur:</li>
+                  <a href="https://www.Facebook.com/BoutiqueGifti/"
+                    target="_blank">
+                     <i class="fa fa-facebook-official" style="font-size:32px;color:blue; vertical-align: middle"></i>
+                  </a>
+                  <a href="https://www.instagram.com/BoutiqueGifti/" target="_blank">
+                     <i class="fa fa-instagram" style="font-size:32px;color:purple; vertical-align: middle"></i>
+                  </a>
+                  <a href="https://www.twitter.com/Gifti49765724/" target="_blank">
+                     <i class="fa fa-twitter" style="font-size:32px;color:blue; vertical-align: middle"></i>
+                  </a>
+               </ul>
+            </div>
+            <!-- end reseaux sociaux-->
+         </footer>
+      </div>
+      <!-- end main content div-->
+      <script src="../js/slider.js"></script>
+      <script src="../js/basket.js"></script>
+   </body>
 
 </html>
