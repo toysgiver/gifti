@@ -50,9 +50,7 @@ function initGrid( nbCard ) {
       cmp++;
     }
   }
-  console.log( card );
   card = shuffleCard( card );
-  console.log( card );
   var cmp = 0;
   for ( var i = 0; i < grid.length; i++ ) {
     for ( var j = 0; j < grid[ i ].length; j++ ) {
@@ -79,6 +77,8 @@ function createGrid( ligne, colone ) {
     table.appendChild( tr );
     for ( var j = 0; j < colone; j++ ) {
       var td = document.createElement( "td" );
+      td.style.width = 100/colone+"%";
+      td.style.height = 100/colone+"%";
       tr.appendChild( td );
     }
   }

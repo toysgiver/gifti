@@ -2,8 +2,11 @@
   border: 1px solid black;
 }
 
+#memory{
+    width: 80%;
+    margin: auto;
+}
+
 #memory td{
-  height: 50px;
-  width: 50px;
   background-size: 100% 100%;
 }
