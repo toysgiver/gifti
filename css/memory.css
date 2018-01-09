@@ -69,3 +69,26 @@
     line-height: 50px;
     text-align: center;
 }
+
+.jeu{
+  position: relative;
+}
+
+.jeu .regles {
+  position: absolute;
+  width: 24%;
+  text-align: justify;
+  margin: 3%;
+  text-indent: 25px;
+}
+
+h1{
+  text-align: center;
+  margin: 20px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
+}
+
+h2{
+  font-size: 20px;
+}
