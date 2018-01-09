@@ -9,8 +9,8 @@
 }
 
 #index_content h4{
- text-align: center;
-  background-color: #BDBDBD;
+  text-align: center;
+  background-color: #819FF7;
 }
 
 #index_affichage_produit{
@@ -45,6 +45,7 @@
 }
 
 #index_affichage_produit img{
+  margin-top: 10px;
   width: 150px;
   height: 150px;
   max-width: 80%;
