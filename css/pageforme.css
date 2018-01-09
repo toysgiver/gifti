@@ -33,6 +33,7 @@
   height: 200px;
   max-width: 80%;
   min-width: 20%;
+  margin-top: 20px;
 }
 
 #affichage_produit .produit{
@@ -97,3 +98,40 @@ section{
   height: 265px;
   margin-bottom: 20px;
 }
+
+.baniere{
+  position: relative;
+}
+
+ .baniere h1{
+  position: absolute;
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+  }
+
+.basage .baniere h1{
+  top: 60px;
+  left: 100px;
+}
+
+  .filles .baniere h1{
+    top: 100px;
+    right: 100px;
+    }
+
+    .garcons .baniere h1{
+
+      top: 100px;
+      left: 30px;
+
+      }
+ .jeuxdesociete .baniere h1{
+   top: 50px;
+   right: 100px;
+
+ }
+
+ .jeuxvideos .baniere h1{
+
+   top: 60px;
+   left: 130px;
