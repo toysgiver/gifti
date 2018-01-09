@@ -32,6 +32,10 @@
   background-color: #fff;
 }
 
+#index_affichage_produit .description{
+    display: none;
+}
+
 #index_affichage_info{
   width: 500px;
   text-align: center;
