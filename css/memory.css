@@ -5,10 +5,16 @@
 #memory{
     width: 40%;
     margin: auto;
+    border-collapse: collapse;
+    border: 5px solid black;
 }
 
 #memory td{
-  background-size: 100% 100%;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 5px solid black;
+  background-image: url("../img/logo-min.png");
 }
 
 #memoryPlayer{
@@ -59,5 +65,7 @@
     border : 5px solid orange;
     border-radius: 25px;
     padding : 25px;
+    font-size: 24px;
+    line-height: 50px;
     text-align: center;
 }

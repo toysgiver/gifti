@@ -6,12 +6,6 @@ var score = new Array( 2 );
 var grid = new Array( ligne );
 var cardImg = new Array( 28 );
 
-document.getElementById("memoryPlayer").innerHTML = "";
-var pop = document.createElement("div");
-pop.classList.add("memoryVictory");
-pop.innerHTML = "Félicitation Joueur "+player+".<br/>Voici votre code promo : <br/>"+getCoupon();
-console.log(pop);
-document.getElementById("content").appendChild(pop);
 
 init( ligne, colone );
 
@@ -116,10 +110,12 @@ function jouer( elem ) {
     if ( choixPlayer[ 0 ] == null ) {
         choixPlayer[ 0 ] = elem;
         elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
+        elem.style.backgroundSize = "100% 100%";
         document.getElementById("memoryPlayer").innerHTML = "Joueur "+player+" selectionne une seconde carte.";
     } else if ( choixPlayer[ 0 ] != elem ) {
         choixPlayer[ 1 ] = elem;
         elem.style.backgroundImage = "url(" + getImg( elem ) + ")";
+        elem.style.backgroundSize = "100% 100%";
         if ( !checkChoix() ) {
             player = ( player == 1 ) ? 2 : 1;
             document.getElementById("memoryPlayer").innerHTML = "Joueur "+player+" &agrave; toi de jouer.";
@@ -162,10 +158,12 @@ function checkChoix() {
 
 function checkVictory() {
   if ( score[ 0 ] + score[ 1 ] == ( ligne * colone ) / 2 ) {
-    document.getElementById("memoryPlayer").innerHTML = "";
-    var pop = document.createElement("div");
-    pop.classList.add("memoryVictory");
-    pop.innerHTML = "Félicitation Joueur "+player+".<br/>Voici votre code promo : <br/>"+getCoupon();
+      document.getElementById("memoryPlayer").innerHTML = "";
+      var pop = document.createElement("div");
+      pop.classList.add("memoryVictory");
+      pop.innerHTML = "Félicitation Joueur "+player+".<br/>Voici votre code promo : <br/>"+getCoupon();
+      console.log(pop);
+      document.getElementById("content").appendChild(pop);
   }
 }
 
