@@ -17,6 +17,7 @@
 }
 
 #index_affichage_produit .produit{
+  border: 1px solid black;
   width: 300px;
   text-align: center;
   font-size: 16px;
@@ -31,7 +32,6 @@
 }
 
 #index_affichage_produit img{
-  border-radius: 70%;
   width: 150px;
   height: 150px;
   max-width: 80%;
