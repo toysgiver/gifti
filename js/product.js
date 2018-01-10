@@ -26,7 +26,7 @@ function popupProducts(event, elem){
 
         backPopup.onclick = function(e){
             elem2.remove();
-            elem2.onclick = function(e){popupProducts(e, this)};
+            //elem2.onclick = function(e){popupProducts(e, this)};
             backPopup.remove();
         };
 
@@ -34,7 +34,7 @@ function popupProducts(event, elem){
             if(!e.target.classList.contains("addBasket")){
                 elem2.remove();
                 backPopup.remove();
-                elem2.onclick = function(e){popupProducts(e, this)};
+                //elem2.onclick = function(e){popupProducts(e, this)};
             }
         };
     }

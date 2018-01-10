@@ -84,7 +84,7 @@ function createGrid( ligne, colone ) {
     }
   }
 
-  var td = table.getElementsByTagName("td");
+  //var td = table.getElementsByTagName("td");
   var style = document.createElement("style");
   style.innerHTML = "#memory td{width:"+table.offsetWidth/colone+"px; height:"+table.offsetWidth/ligne+"px}";
   document.getElementsByTagName("head")[0].appendChild(style);
@@ -170,7 +170,7 @@ function checkVictory() { // si toutes les cartes sont retourné le joueur actue
 
 function chaineAleatoire() { // generation d'une chaine de 4 caractère aléatoire
     var length = '';
-    var charSet = charSet || '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var charSet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     for (var i = 0; i < 4; i++) {
         var randomPoz = Math.floor(Math.random() * charSet.length);
         length += charSet[randomPoz];
@@ -179,6 +179,6 @@ function chaineAleatoire() { // generation d'une chaine de 4 caractère aléatoi
 }
 
 function getCoupon(){ //generation du coupon de réduction
-	coupon = chaineAleatoire()+'-'+chaineAleatoire()+'-'+chaineAleatoire()+'-2018';
+	var coupon = chaineAleatoire()+'-'+chaineAleatoire()+'-'+chaineAleatoire()+'-2018';
 	return coupon;
 }

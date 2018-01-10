@@ -15,7 +15,7 @@ function createBasket(){ // creation du panier
     populateBasket();
 }
 
-function showHideBasket(basket){ // affiche et cache le panier sur mouseover
+function showHideBasket(){ // affiche et cache le panier sur mouseover
     var basket = document.getElementById("basket");
     var showBasket = document.getElementById("showBasket");
     showBasket.onmouseenter = function(e){
@@ -57,7 +57,7 @@ function populateBasket(){ // remplit le panier a partir du sessionStorage
         };
     }
     var li = document.createElement("li");
-    li.setAttribute("rel",i);
+    //li.setAttribute("rel",i);
     li.innerHTML = ' \
         <div style="margin-left:50px;" class="titre">Total</div> \
         <div class="prix">'+prix+' &euro;</div> \</div>';
@@ -92,6 +92,8 @@ function addToBasket(elem){// ajoute l'élément au panier
         item[2] = img;
     }
     panier.push(item);
+    console.log(panier);
+    console.log(JSON.stringify(panier));
     sessionStorage.setItem("panier", JSON.stringify(panier));
 
     populateBasket();
